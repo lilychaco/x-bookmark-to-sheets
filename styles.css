@@ -1,0 +1,53 @@
+/* X Bookmark to Google Sheets スタイル */
+.bookmark-sheets-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34.75px;
+  height: 34.75px;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+  color: rgb(113, 118, 123);
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.bookmark-sheets-btn:hover {
+  background-color: rgba(52, 168, 83, 0.1);
+  color: rgb(52, 168, 83);
+}
+
+.bookmark-sheets-btn svg {
+  width: 18.75px;
+  height: 18.75px;
+  fill: currentColor;
+}
+
+.bookmark-sheets-btn.bookmarked {
+  color: rgb(52, 168, 83);
+}
+
+.bookmark-sheets-btn.bookmarked:hover {
+  background-color: rgba(52, 168, 83, 0.1);
+}
+
+/* アニメーション効果 */
+@keyframes bookmarkSuccess {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bookmark-sheets-btn.animate {
+  animation: bookmarkSuccess 0.3s ease-in-out;
+}
